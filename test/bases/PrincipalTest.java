@@ -19,6 +19,7 @@ class PrincipalTest {
 	}
 	
 	
+	
 	@Test public void masquerLettres_five() {
 		assertEquals("xxxxx",Principal.masquerLettres("abcde",'x'));
 	}
@@ -26,6 +27,25 @@ class PrincipalTest {
 	@Test public void masquerLettres_empty() {
 		assertEquals("",Principal.masquerLettres("",'x'));
 	}
+	
+	
+	
+	@Test public void estUnPalindrome_empty() {
+		assertEquals(true,Principal.estUnPalindrome(""));
+	}
+	
+	@Test public void estUnPalindrome_normalLengthPair() {
+		assertEquals(true,Principal.estUnPalindrome("abba"));
+	}
+	
+	@Test public void estUnPalindrome_normalLengthImpaire() {
+		assertEquals(true,Principal.estUnPalindrome("aboba"));
+	}
+	
+	@Test public void estUnPalindrome_invalid() {
+		assertEquals(false,Principal.estUnPalindrome("aba"));
+	}
+	
 	
 	
 	

@@ -5,10 +5,9 @@ public class Principal
 	
 	public static void main(String[] args )
 	{
-		String prenom = "charles";
-		int longueur = prenom.length();
-		System.out.print(prenom);
-		System.out.print(" (" + Principal.longueurDeChaine(prenom) +" caractères)");	
+		
+		System.out.print( Principal.estUnPalindrome("abba") );	
+		
 	}
 	
 	
@@ -46,6 +45,25 @@ public class Principal
 		return res;
 	}
 
-	
+	public static boolean estUnPalindrome(String chaine)
+	{
+		boolean res = true;
+		int fin = chaine.length()-1;
+		int i = 0;
+		while(i < fin && i != fin && res)
+		{
+			if (chaine.charAt(i) == chaine.charAt(fin))
+			{
+				i++;
+				fin--;
+			}
+			else
+			{
+				res = false;
+			}
+		}
+		return res ;
+		
+	}
 	
 }
