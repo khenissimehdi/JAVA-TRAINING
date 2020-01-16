@@ -19,4 +19,15 @@ class PrincipalTest {
 	}
 	
 	
+	@Test public void masquerLettres_five() {
+		assertEquals("xxxxx",Principal.masquerLettres("abcde",'x'));
+	}
+	
+	@Test public void masquerLettres_empty() {
+		assertEquals("",Principal.masquerLettres("",'x'));
+	}
+	
+	
+	
+	
 }
