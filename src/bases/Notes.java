@@ -18,6 +18,11 @@ public class Notes {
 	}
 	
 	
+	/**
+	 * Méthode qui retourne un tableau de double géneré aléatoirement (avec des valeurs comprises entre 0 et 20)
+	 * @param capacite nombre d'élements dans le tableau
+	 * @return tableau de double
+	 */
 	public static double[] genererTableauDeNotes(int capacite)
 	{
 		double[] res;
@@ -31,6 +36,12 @@ public class Notes {
 	}
 
 	
+	/**
+	 * Méthode qui teste si le tableau de double passé en paramètre (tab2) possède un élément supérieur au double en paramètre (value)
+	 * @param tab2 tableau de double
+	 * @param value double à comparer
+	 * @return nombre d'élement supérieur au paramètre 'value' dans le tableau (tab2)
+	 */
 	public static int nombresDeNotesSuperieuresA(double[] tab2, double value)
 	{
 		int res = 0;
@@ -43,6 +54,76 @@ public class Notes {
 	}
 	
 	
+	/**
+	 * Méthode qui renvoie le double le plus petit du tableau de double passé en pamètres (tab3)
+	 * @param tab3 tableau de double
+	 * @return double le plus grand au sein du tableau de double
+	 */
+	public static double minimum(double[] tab3) {
+		double res = tab3[0];
+		for (double i : tab3)
+		{
+			res = (i < res) ? i : res;
+		}
+		return res;	
+	}
 	
+	
+	/**
+	 * Méthode qui renvoie le double le plus grand du tableau de double passé en pamètres (tab3)
+	 * @param tab3 tableau de double
+	 * @return double le plus grand au sein du tableau de double
+	 */
+	public static double maximum(double[] tab3) {
+		double res = tab3[0];
+		for (double i : tab3)
+		{
+			res = (i > res) ? i : res;
+		}
+		return res;	
+	}
+	
+	
+	/**
+	 * Méthode qui renvoie la moyenne des valeurs du tableau de double mit en pamètres
+	 * @param tab3 tableau de double
+	 * @return double moyenne des valeurs du tableau de double
+	 */
+	public static double moyenne(double[] tab3) {
+		double res = 0;
+		for (double i : tab3)
+		{
+			res += i;
+		}
+		return res/tab3.length;	
+	}
 
+	public static int variete(String chaine) {
+		boolean[] memo = new boolean[26];
+		int res = 0 ;
+		
+		for(int  i = 0 ; i <chaine.length();i++) {
+			if(chaine.charAt(i) >= 'A' && chaine.charAt(i)<='Z') {
+				memo[chaine.charAt(i)- 'A'] = true;
+				
+			}
+			if(chaine.charAt(i) >= 'a' && chaine.charAt(i)<='z') {
+				memo[chaine.charAt(i)- 'a'] = true;
+				
+			}
+		}
+		
+		for(boolean n : memo) {
+			if(n) {
+				res++;
+			}
+			
+		}
+		return res ; 
+		
+	}
+	
+	
+	
+	
 }
