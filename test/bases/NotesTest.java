@@ -71,27 +71,26 @@ class NotesTest {
 	}
 	
 	
-	
-	@Test 
-	public void variete_one() {
-		assertEquals(4,Notes.variete("abcd"));
-	}
 
 	@Test 
-	public void variete_two() {
+	public void variete_allMinuscules() {
 		assertEquals(3,Notes.variete("aabc"));
 	}
 	
 	@Test 
-	public void variete_three() {
+	public void variete_mixed() {
 		assertEquals(1,Notes.variete("aaA"));
 	}
 	
 	@Test 
-	public void variete_four() {
+	public void variete_withNumber() {
 		assertEquals(1,Notes.variete("a2"));
 	}
 	
+	@Test 
+	public void variete_allMajuscules() {
+		assertEquals(2,Notes.variete("AAZZAZ"));
+	}
 	
 	
 }

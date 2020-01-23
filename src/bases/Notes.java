@@ -59,7 +59,8 @@ public class Notes {
 	 * @param tab3 tableau de double
 	 * @return double le plus grand au sein du tableau de double
 	 */
-	public static double minimum(double[] tab3) {
+	public static double minimum(double[] tab3)
+	{
 		double res = tab3[0];
 		for (double i : tab3)
 		{
@@ -74,7 +75,8 @@ public class Notes {
 	 * @param tab3 tableau de double
 	 * @return double le plus grand au sein du tableau de double
 	 */
-	public static double maximum(double[] tab3) {
+	public static double maximum(double[] tab3)
+	{
 		double res = tab3[0];
 		for (double i : tab3)
 		{
@@ -89,7 +91,8 @@ public class Notes {
 	 * @param tab3 tableau de double
 	 * @return double moyenne des valeurs du tableau de double
 	 */
-	public static double moyenne(double[] tab3) {
+	public static double moyenne(double[] tab3)
+	{
 		double res = 0;
 		for (double i : tab3)
 		{
@@ -98,18 +101,25 @@ public class Notes {
 		return res/tab3.length;	
 	}
 
-	public static int variete(String chaine) {
+	
+	/**
+	 * Méthode
+	 * @param chaine
+	 * @return
+	 */
+	public static int variete(String chaine)
+	{
 		boolean[] memo = new boolean[26];
 		int res = 0 ;
 		
 		for(int  i = 0 ; i <chaine.length();i++) {
-			if(chaine.charAt(i) >= 'A' && chaine.charAt(i)<='Z') {
-				memo[chaine.charAt(i)- 'A'] = true;
+			char c = chaine.charAt(i);
+			if(c >= 'A' && c <= 'Z') {
+				memo[c - 'A'] = true;
 				
 			}
-			if(chaine.charAt(i) >= 'a' && chaine.charAt(i)<='z') {
-				memo[chaine.charAt(i)- 'a'] = true;
-				
+			else if(c >= 'a' && c <= 'z') {
+				memo[c - 'a'] = true;
 			}
 		}
 		
@@ -124,6 +134,11 @@ public class Notes {
 	}
 	
 	
-	
+	/*
+	public static int[] histogrammeDesVarietes()
+	{
+		
+	}
+	*/
 	
 }
