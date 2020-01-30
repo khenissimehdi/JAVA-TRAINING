@@ -2,15 +2,23 @@ package bases;
 
 import shapes.Rectangle;
 import shapes.Triangle;
+import chess.Position;
 
 public class Classes {
 	
+	/**
+	 * Main
+	 * @param args
+	 */
 	public static void main(String[] args )
 	{
 		//testRectangle();
-		testTriangle();
+		//testTriangle();
 	}
 	
+	/**
+	 * Tests classe rectangle
+	 */
 	private static void testRectangle()
 	{
 		Rectangle test = new Rectangle(5,4);
@@ -28,6 +36,9 @@ public class Classes {
 		test.draw();
 	}
 
+	/**
+	 * Tests classe Triangle
+	 */
 	private static void testTriangle()
 	{
 		Triangle test = new Triangle(5);

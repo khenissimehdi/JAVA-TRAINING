@@ -7,31 +7,57 @@ public class Triangle {
 	private boolean filled = false;
 	
 	
+	/**
+	 * Constructeur classe Triangle
+	 * @param _size
+	 */
 	public Triangle (int _size)
 	{
 		this.size = _size;
 	}
 	
+	
+	/**
+	 * Accesseur attribut pen
+	 */
 	public char getPen()
 	{
 		return this.pen;
 	}
 	
+	
+	/**
+	 * Modificateur attribut pen
+	 * @param _pen Char
+	 */
 	public void setPen(char _pen)
 	{
 		this.pen = _pen;
 	}
 	
+	
+	/**
+	 * Accesseur attribut filled
+	 */
 	public boolean isFilled()
 	{
 		return this.filled;
 	}
 	
+	
+	/**
+	 * Modificateur attribut Filled
+	 * @param _filled Boolean
+	 */
 	public void setFilled(boolean _filled)
 	{
 		this.filled = _filled;
 	}
 
+	
+	/**
+	 * Méthode permettant de déssiner une figure.
+	 */
 	public void draw()
 	{
 		StringBuilder res = new StringBuilder();
