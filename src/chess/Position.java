@@ -1,5 +1,6 @@
 package chess;
 
+
 public class Position {
 	
 	private int x,y;
@@ -11,6 +12,7 @@ public class Position {
 		this.x=0;
 		this.y=0;
 	}
+	
 	
 	/**
 	 * Constructeur de la clase position
@@ -29,27 +31,31 @@ public class Position {
 	}
 	
 	public Position(String algebraicNotation) {
-		char pos1 = algebraicNotation.charAt(0);
-		int pos2 = (int) algebraicNotation.charAt(1);
 		
-		if (algebraicNotation.length() > 2 || algebraicNotation.length() < 0)
+		if (algebraicNotation.length() != 2)
 		{
 			throw new IllegalArgumentException("La chaine de caractères ne possèdent pas deux caractères");
 		}
 		
-		if (pos1 < 'A' && pos1 > 'H')
+		char pos1 = algebraicNotation.charAt(0);
+	    char pos2 = algebraicNotation.charAt(1);
+		
+		if (pos1 < 'A' || pos1 > 'H')
 		{
 			throw new IllegalArgumentException("Le premier caractère (" + algebraicNotation.charAt(0) + ") n'est pas comprit entre A et H");
 		}
 		
-		if (pos2 < 0)
+		if (pos2 < '1')
 		{
-			throw new IllegalArgumentException("Le deuxième caractère (" + algebraicNotation.charAt(1) + ") est inférieur à 0");
+			throw new IllegalArgumentException("Le deuxième caractère (" + algebraicNotation.charAt(1) + ") est inférieur à 1");
 		}
-		else if (pos2 > 8)
+		if (pos2 > '8')
 		{
 			throw new IllegalArgumentException("Le deuxième caractère (" + algebraicNotation.charAt(1) + ") est supérieur à 8");
 		}
+		
+		this.x = pos1 - 'A';
+		this.y = pos2 - '1';
 	}
 	
 	/**
@@ -59,6 +65,14 @@ public class Position {
 	public int getX() {
 		return this.x;
 	}
+	/**
+	 * Accesseur attribut Y
+	 * @return
+	 */
+	public int getY(){
+		return this.y;
+	}
+	
 	
 
 	/**
@@ -100,9 +114,31 @@ public class Position {
 		return true;
 	}
 	
+	public String toAlgebraicNotation() {
+		StringBuilder res = new StringBuilder(2);
+		char valueX = (char)(this.x + 'A');
+		res.append(Character.toString(valueX));
+		res.append(Integer.toString(this.y + 1));
+		return res.toString();
+	}
 	
+	public boolean isOnSameLineAs(Position pos) {
+		return (pos.getY() == this.getY()) ? true : false;
+	}
 	
+	public boolean isOnSameColumnAs(Position pos) {
+		return (pos.getX() == this.getX()) ? true : false;
+	}
 	
+	public boolean isOnSameDiagonalAs(Position pos) {
+		int pos1 = Math.abs(pos.getX() - this.getY());
+		int pos2 = Math.abs(this.getX() - pos.getY());
+		return pos1 == pos2;
+	}
+	
+	public int getManhattanDistance(Position pos) {
+		return Math.abs(pos.getX() - this.getX()) + Math.abs(pos.getY() - this.getY());
+	}
 	
 
 }
