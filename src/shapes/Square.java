@@ -5,11 +5,11 @@ public class Square extends Rectangle {
 	
 	/**
 	 * Constructeur classe
-	 * @param _size
+	 * @param size
 	 */
-	public Square (int _side)
+	public Square (int side)
 	{
-		super(_side,_side);
+		super(side,side);
 	}
 	
 	

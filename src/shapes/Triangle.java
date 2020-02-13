@@ -7,12 +7,32 @@ public class Triangle extends Shape{
 	
 	
 	/**
-	 * Constructeur classe Triangle
-	 * @param _size
+	 * Constructeur classe
+	 * @param size
 	 */
-	public Triangle (int _size)
+	public Triangle (int size)
 	{
-		this.size = _size;
+		this.size = size;
+	}
+
+	
+	/*
+	 * Calcul du périmètre
+	 */
+	@Override
+	public double getPerimeter() {
+		double res = this.size*3;
+		return res;
+	}
+
+	
+	/*
+	 * Calcul de la surface
+	 */
+	@Override
+	public double getSurface() {
+		double res = (this.size*this.size)*(Math.sqrt(3)/4);
+		return res;
 	}
 	
 	

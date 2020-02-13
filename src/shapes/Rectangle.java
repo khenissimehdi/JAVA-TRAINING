@@ -11,10 +11,32 @@ public class Rectangle extends Shape {
 	 * @param width Entier
 	 * @param height Entier
 	 */
-	public Rectangle(int _width, int _height)
+	public Rectangle(int width, int height)
 	{
-		this.width = _width;
-		this.height = _height;
+		this.width = width;
+		this.height = height;
+	}
+
+	
+	/*
+	 * Calcul du périmètre
+	 */
+	@Override
+	public double getPerimeter() {
+		double res = 2 * (this.height + this.width);
+		return res;
+		
+	}
+	
+
+	
+	/*
+	 * Calcul de la surface
+	 */
+	@Override
+	public double getSurface() {
+		double res = this.height * this.width;
+		return res;
 	}
 	
 	

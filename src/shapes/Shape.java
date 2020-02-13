@@ -1,6 +1,6 @@
 package shapes;
 
-public class Shape {
+public abstract class Shape {
 
 	
 	private char pen = '#';
@@ -18,11 +18,11 @@ public class Shape {
 	
 	/**
 	 * Modificateur attribut pen
-	 * @param _pen Char
+	 * @param pen Char
 	 */
-	public void setPen (char _pen)
+	public void setPen (char pen)
 	{
-		this.pen = _pen;
+		this.pen = pen;
 	}
 	
 	
@@ -37,13 +37,17 @@ public class Shape {
 	
 	/**
 	 * Modificateur attribut filled
-	 * @param _filled Boolean
+	 * @param filled Boolean
 	 */
-	public void setFilled(boolean _filled)
+	public void setFilled(boolean filled)
 	{
-		this.filled = _filled;
+		this.filled = filled;
 	}
 	
-	public void draw() {}
+	public abstract double getPerimeter();
+	
+	public abstract double getSurface();
+	
+	public abstract void draw();
 	
 }

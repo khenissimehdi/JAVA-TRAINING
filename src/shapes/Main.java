@@ -15,5 +15,6 @@ public class Main {
 		sh3.draw();
 		
 	}
+	
 
 }
