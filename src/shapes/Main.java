@@ -7,12 +7,15 @@ public class Main {
 		
 		Shape sh1 = new Triangle(10);
 		sh1.draw();
+		System.out.println(sh1);
 		
 		Shape sh2 = new Rectangle(8,12);
 		sh2.draw();
+		System.out.println(sh1);
 		
 		Shape sh3 = new Square(7);
 		sh3.draw();
+		System.out.println(sh1);
 		
 	}
 	

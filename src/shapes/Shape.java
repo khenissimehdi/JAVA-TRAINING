@@ -44,6 +44,15 @@ public abstract class Shape {
 		this.filled = filled;
 	}
 	
+	
+	/**
+	 * Méthode modifiant l'affichage d'un objet de la classe
+	 */
+	public String toString() {
+		return "Type : " + this.getClass().getSimpleName() + " / Périmètre : " + this.getPerimeter() + " / Surface : " + this.getSurface(); 
+	}
+	
+	
 	public abstract double getPerimeter();
 	
 	public abstract double getSurface();
