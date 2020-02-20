@@ -1,6 +1,6 @@
 package shapes;
 
-public class Triangle extends Shape{
+public class Triangle extends AbstractShape{
 	
 	
 	private int size;

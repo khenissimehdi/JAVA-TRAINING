@@ -1,6 +1,6 @@
 package shapes;
 
-public class Ellipse extends Shape{
+public class Ellipse extends AbstractShape{
 
 	
 	private double a, b;

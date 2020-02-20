@@ -1,6 +1,6 @@
 package shapes;
 
-public class Rectangle extends Shape {
+public class Rectangle extends AbstractShape {
 	
 	
 	private int width, height;
