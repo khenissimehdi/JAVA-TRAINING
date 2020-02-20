@@ -52,6 +52,22 @@ public abstract class AbstractShape implements Shape {
 		return "Type : " + this.getClass().getSimpleName() + " / Périmètre : " + this.getPerimeter() + " / Surface : " + this.getSurface(); 
 	}
 	
+	public int compareTo(Shape obj)
+	{
+		int res;
+		double objPerimeter = obj.getPerimeter();
+		double thisPerimeter = this.getPerimeter();
+		
+		if (thisPerimeter < objPerimeter)
+			res = -1;
+		else if (thisPerimeter > objPerimeter)
+			res = 1;
+		else
+			res = 0;
+		
+		return res;
+	}
+	
 	
 	@Override
 	public abstract double getPerimeter();
