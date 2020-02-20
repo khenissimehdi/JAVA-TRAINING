@@ -11,11 +11,11 @@ public class TestTreeMap {
         map.put("vert", Color.GREEN);
         System.out.println("Map :              " + map);
         System.out.println("Taille :           " + map.size());
-        System.out.println("Elément pour vert :" + map.get("vert"));
-        System.out.println("Elément pour noir :" + map.get("noir"));
+        System.out.println("Elément pour vert : " + map.get("vert"));
+        System.out.println("Elément pour noir : " + map.get("noir"));
         for (String key: map.keySet()) System.out.println("Clé : " + key);
         for (Color color: map.values()) System.out.println("Valeur : " + color);
         map.remove("bleu");
-        System.out.println("Elément pour bleu :" + map.get("bleu"));
+        System.out.println("Elément pour bleu : " + map.get("bleu"));
     }
 }
