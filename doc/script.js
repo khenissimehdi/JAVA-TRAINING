@@ -20,7 +20,7 @@ function updateTabs(type)
         var spanNode = sNode.firstChild;
         if (value == type) {
             sNode.className = activeTableTab;
-            spanNode.innerHTML = tabs[value][1];
+            spanNode.textContent = tabs[value][1];
         }
         else {
             sNode.className = tableTab;
